@@ -10,16 +10,13 @@ import UIKit
 class CustomTableViewCell: UITableViewCell {
     @IBOutlet var checkImageView: UIImageView!
     @IBOutlet var contentLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+    func configure(isChecked: Bool, name: String) {
+        if isChecked == true {
+            checkImageView.image = UIImage(named: "check")
+        } 
+        contentLabel.text = name
     }
     
 }

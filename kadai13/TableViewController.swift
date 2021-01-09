@@ -32,9 +32,11 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1", for: indexPath) as! CustomTableViewCell
-        cell.checkImageView.image = UIImage(named: "check")
-        cell.contentLabel.text = fruits[indexPath.row]
-        
+        if indexPath.row % 2 == 0 {
+            cell.configure(isChecked: false, name: fruits[indexPath.row])
+        } else {
+            cell.configure(isChecked: true, name: fruits[indexPath.row])
+        }
         
         
         return cell
