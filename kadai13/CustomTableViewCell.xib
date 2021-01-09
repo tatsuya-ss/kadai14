@@ -42,7 +42,7 @@
                 <outlet property="checkImageView" destination="yq3-p3-HFW" id="2Ai-Ro-5z8"/>
                 <outlet property="contentLabel" destination="PnN-Le-60k" id="Jvi-Iz-gcZ"/>
             </connections>
-            <point key="canvasLocation" x="-84" y="86"/>
+            <point key="canvasLocation" x="-84.057971014492765" y="85.714285714285708"/>
         </tableViewCell>
     </objects>
 </document>
