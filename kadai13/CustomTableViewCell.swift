@@ -14,13 +14,15 @@ final class CustomTableViewCell: UITableViewCell {
     func configure(isChecked: Bool, name: String) {
         if isChecked == true {
             checkImageView.image = UIImage(named: ImageViewName.Name)
-        } 
+        } else {
+            checkImageView.image = nil
+        }
         contentLabel.text = name
     }
 //これでもできるが、パフォーマンスの観点からcellForRowAtの中で初期化を行う事が推奨されているらしい
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        //画像の初期化
-        checkImageView.image = nil
-    }
+//    override func prepareForReuse() {
+//        super.prepareForReuse()
+//        //画像の初期化
+//        checkImageView.image = nil
+//    }
 }
