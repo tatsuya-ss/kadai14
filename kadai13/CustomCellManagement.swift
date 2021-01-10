@@ -8,6 +8,9 @@
 import Foundation
 
 enum CustomCellId {
-    static let cellId = "Cell1"
-    static let checkImageName = "check"
+    static let Id = "Cell1"
+}
+
+enum ImageViewName {
+    static let Name = "check"
 }

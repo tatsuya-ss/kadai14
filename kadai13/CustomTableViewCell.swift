@@ -13,7 +13,7 @@ final class CustomTableViewCell: UITableViewCell {
     
     func configure(isChecked: Bool, name: String) {
         if isChecked == true {
-            checkImageView.image = UIImage(named: CustomCellId.checkImageName)
+            checkImageView.image = UIImage(named: ImageViewName.Name)
         } 
         contentLabel.text = name
     }

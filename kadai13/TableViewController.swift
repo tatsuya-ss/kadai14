@@ -14,7 +14,7 @@ final class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //identifierの設定
-        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: CustomCellId.cellId)
+        tableView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: CustomCellId.Id)
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -27,7 +27,7 @@ final class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //xibで作成したセルを使用。
-        let cell = tableView.dequeueReusableCell(withIdentifier: CustomCellId.cellId, for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CustomCellId.Id, for: indexPath) as! CustomTableViewCell
         if indexPath.row % 2 == 0 {
             cell.configure(isChecked: false, name: fruits[indexPath.row])
         } else {
