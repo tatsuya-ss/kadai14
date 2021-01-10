@@ -28,8 +28,6 @@ final class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //xibで作成したセルを使用。
         let cell = tableView.dequeueReusableCell(withIdentifier: CustomCellId.cellId, for: indexPath) as! CustomTableViewCell
-        //再利用するセルの状態を初期化してから、if文で条件分岐する
-        cell.checkImageView.image = nil
         if indexPath.row % 2 == 0 {
             cell.configure(isChecked: false, name: fruits[indexPath.row])
         } else {
