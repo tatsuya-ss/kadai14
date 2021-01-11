@@ -76,11 +76,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iU3-mO-yqs">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="LPq-PJ-p4V"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="LPq-PJ-p4V">
+                            <connections>
+                                <segue destination="f2j-rX-b4I" kind="unwind" unwindAction="cancelWithSegue:" id="Fw8-z2-tIt"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="zph-o5-JKg"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3aI-CU-Nfp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="f2j-rX-b4I" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3018.840579710145" y="42.857142857142854"/>
         </scene>
