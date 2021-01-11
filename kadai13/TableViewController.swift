@@ -11,7 +11,6 @@ final class TableViewController: UITableViewController {
 
     private let fruits = ["りんご", "みかん", "ばなな", "パイナップル"]
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         //　identifierの設定
