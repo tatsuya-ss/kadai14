@@ -81,8 +81,16 @@
                                 <segue destination="f2j-rX-b4I" kind="unwind" unwindAction="cancelWithSegue:" id="Fw8-z2-tIt"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="zph-o5-JKg"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="zph-o5-JKg">
+                            <connections>
+                                <action selector="saveButton:" destination="xo3-d5-M7X" id="zrW-3N-7b4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="additionalTextLabel" destination="tfc-OV-VJV" id="kZl-eQ-DZC"/>
+                        <segue destination="f2j-rX-b4I" kind="unwind" identifier="exit" unwindAction="exitWithSegue:" id="UKB-t8-Htf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3aI-CU-Nfp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="f2j-rX-b4I" userLabel="Exit" sceneMemberID="exit"/>

@@ -7,22 +7,20 @@
 
 import UIKit
 
-class AdditionalViewController: UIViewController {
-
+final class AdditionalViewController: UIViewController {
+    
+    private static let exitIdentifier = "exit"
+    private(set) var addition = ""
+    @IBOutlet private var additionalTextLabel: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func saveButton(_ sender: Any) {
+        addition = additionalTextLabel.text! ?? ""
+        performSegue(withIdentifier: AdditionalViewController.exitIdentifier, sender: nil)
     }
-    */
-
 }
