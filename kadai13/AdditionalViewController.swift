@@ -8,7 +8,6 @@
 import UIKit
 
 final class AdditionalViewController: UIViewController {
-
     private static let exitIdentifier = "exit"
     private(set) var addition = ""
     @IBOutlet private var additionalTextLabel: UITextField!
@@ -19,7 +18,7 @@ final class AdditionalViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func saveButton(_ sender: Any) {
+    @IBAction private func saveButton(_ sender: Any) {
         addition = additionalTextLabel.text!
         performSegue(withIdentifier: AdditionalViewController.exitIdentifier, sender: nil)
     }

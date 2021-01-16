@@ -8,7 +8,6 @@
 import UIKit
 
 final class TableViewController: UITableViewController {
-
     private var fruits = ["りんご", "みかん", "ばなな", "パイナップル"]
 
     override func viewDidLoad() {
@@ -39,10 +38,10 @@ final class TableViewController: UITableViewController {
         return cell
     }
 
-    @IBAction func cancel(segue: UIStoryboardSegue) {
+    @IBAction private func cancel(segue: UIStoryboardSegue) {
     }
 
-    @IBAction func exit(segue: UIStoryboardSegue) {
+    @IBAction private func exit(segue: UIStoryboardSegue) {
         let additionalView = segue.source as? AdditionalViewController
         fruits.append(additionalView!.addition)
 
